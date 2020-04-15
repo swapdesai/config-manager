@@ -27,6 +27,7 @@ ssh-copy-id -i src/test/resources/keys/id_rsa.pub root@<remote-machine-ip>
 
 Packaging the application as a fat jar
 ```
+mvn install:install-file -Dfile=$(pwd)/src/test/resources/lib/jsch-extension.jar -DgroupId=com.jcraft -DartifactId=jsch -Dversion=0.1.55 -Dpackaging=jar
 mvn -DskipTests=true clean install
 ```
 
