@@ -18,6 +18,13 @@ Configure the remote machine for SSH access using RSA key pair
 <br />
 (TODO: configure in bootstrap.sh)
 
+#### Application Dependencies:
+##### Build Dependnecies
+* JDK
+* Maven
+
+##### Runtime Dependnecies
+* JRE
 
 ```
 ssh-copy-id -i src/test/resources/keys/id_rsa.pub root@<remote-machine-ip>
