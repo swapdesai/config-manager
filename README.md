@@ -15,6 +15,18 @@ The application uses the Spring Shell project to build a shell based application
 ## Prerequisites
 
 Configure the remote machine for SSH access using RSA key pair
+Generate a RSA keypair
+```
+ssh-keygen -m PEM -t rsa -b 2048
+```
+
+Copy the public key to the remote server(s)
+```
+ssh-copy-id -i src/test/resources/keys/id_rsa.pub root@<remote-machine-ip>
+```
+
+Configure the private key along with the path "ssh.private_key_file" in src/test/resources/application.yml
+
 <br />
 (TODO: configure in bootstrap.sh)
 
@@ -26,9 +38,7 @@ Configure the remote machine for SSH access using RSA key pair
 ##### Runtime Dependnecies
 * JRE
 
-```
-ssh-copy-id -i src/test/resources/keys/id_rsa.pub root@<remote-machine-ip>
-```
+
 
 ## Installing
 
